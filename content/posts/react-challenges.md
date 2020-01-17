@@ -2,7 +2,7 @@
 title = "React Challenges"
 date = "2019-09-05"
 draft = false
-pinned = true
+pinned = false
 image = "/img/react.png"
 +++
 ## 1- Create a Simple JSX Element 
