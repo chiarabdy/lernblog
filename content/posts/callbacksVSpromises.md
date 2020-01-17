@@ -84,3 +84,50 @@ function promises(resolve, reject){
     })
     //Expecting: user typing / LOL
 ```
+## Promise.all()
+The `Promise.all()` method **returns** a single **Promise** that fulfills when all of the promises passed as an iterable have been fulfilled or when the iterable contains no promises. It **rejects** with the reason of the first promise that rejects.
+```js
+const v1 = new Promise((res, rej)=>{
+    res("Hey, this is V1")
+})
+const v2 = new Promise((res, rej)=>{
+    res("Hey, this is V2")
+})
+const v3 = new Promise((res, rej)=>{
+    res("Hey, this is V3")
+})
+Promise.all(
+    [
+        v1,
+        v2,
+        v3
+    ]
+).then((message)=>{
+    console.log(message)
+
+    //Expected to print 
+    /* ["Hey, this is V1",
+     * "Hey, this is V2",
+    /* "Hey, this is V3"]
+})
+```
+`Promise.all` run every single one of these promises and as soon as it done, it is then going to call **.then()** and **.catch()** depending on if they resolved or failed 
+
+**.then()** will send an array of all of the successful messages, so it will send an array of all of these different resolved parameters.
+
+## promise.race()
+it returns as soon as the first promise is completed instead of waiting for everything to complete. This mean it will return a single promise
+```js
+Promise.race(
+    [
+        v1,
+        v2,
+        v3
+    ]
+).then((message)=>{
+    console.log(message)
+
+    //Expected to print 
+    /* Hey, this is V1
+})
+```
