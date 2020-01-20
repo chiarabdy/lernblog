@@ -1,5 +1,5 @@
 +++
-titile = "Typescript"
+title = "Typescript"
 date = "2019-10-16"
 pinned = false
 draft = false
