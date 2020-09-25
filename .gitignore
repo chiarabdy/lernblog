@@ -4,3 +4,6 @@
 /node_modules
 .idea
 /test
+content/posts/.net.md
+content/posts/C#.md
+content/posts/taskList.md
